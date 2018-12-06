@@ -5,7 +5,7 @@
 Flattened namespace for trfl.
 
 ## Other Functions and Classes
-### [`assert_rank_and_shape_compatibility(tensors, rank)`](https://github.com/deepmind/trfl/blob/master/trfl/base_ops.py?l=64)<!-- assert_rank_and_shape_compatibility .code-reference -->
+### [`assert_rank_and_shape_compatibility(tensors, rank)`](https://github.com/deepmind/trfl/blob/master/trfl/base_ops.py?l=64)<!-- RULE: assert_rank_and_shape_compatibility .code-reference -->
 
 Asserts that the tensors have the correct rank and compatible shapes.
 
@@ -26,7 +26,7 @@ equal or unspecified. E.g. `[2, 3]` is compatible with all of `[2, 3]`,
     compatibility asserts.
 
 
-### [`batched_index(values, indices)`](https://github.com/deepmind/trfl/blob/master/trfl/indexing_ops.py?l=64)<!-- batched_index .code-reference -->
+### [`batched_index(values, indices)`](https://github.com/deepmind/trfl/blob/master/trfl/indexing_ops.py?l=64)<!-- RULE: batched_index .code-reference -->
 
 Equivalent to `values[:, indices]`.
 
@@ -55,7 +55,7 @@ runtime! See `indexing_ops_test` for detailed examples.
   compatible (see shape descriptions in Args list above).
 
 
-### [`best_effort_shape(tensor, with_rank=None)`](https://github.com/deepmind/trfl/blob/master/trfl/base_ops.py?l=31)<!-- best_effort_shape .code-reference -->
+### [`best_effort_shape(tensor, with_rank=None)`](https://github.com/deepmind/trfl/blob/master/trfl/base_ops.py?l=31)<!-- RULE: best_effort_shape .code-reference -->
 
 Extract as much static shape information from a tensor as possible.
 
@@ -82,7 +82,7 @@ Extract as much static shape information from a tensor as possible.
     statically-known number of dimensions.
 
 
-### [`categorical_dist_double_qlearning(atoms_tm1, logits_q_tm1, a_tm1, r_t, pcont_t, atoms_t, logits_q_t, q_t_selector, name='CategoricalDistDoubleQLearning')`](https://github.com/deepmind/trfl/blob/master/trfl/dist_value_ops.py?l=196)<!-- categorical_dist_double_qlearning .code-reference -->
+### [`categorical_dist_double_qlearning(atoms_tm1, logits_q_tm1, a_tm1, r_t, pcont_t, atoms_t, logits_q_t, q_t_selector, name='CategoricalDistDoubleQLearning')`](https://github.com/deepmind/trfl/blob/master/trfl/dist_value_ops.py?l=197)<!-- RULE: categorical_dist_double_qlearning .code-reference -->
 
 Implements Distributional Double Q-learning as TensorFlow ops.
 
@@ -128,7 +128,7 @@ Hessel, Modayil, van Hasselt, Schaul et al.
 * `ValueError`: If the tensors do not have the correct rank or compatibility.
 
 
-### [`categorical_dist_qlearning(atoms_tm1, logits_q_tm1, a_tm1, r_t, pcont_t, atoms_t, logits_q_t, name='CategoricalDistQLearning')`](https://github.com/deepmind/trfl/blob/master/trfl/dist_value_ops.py?l=121)<!-- categorical_dist_qlearning .code-reference -->
+### [`categorical_dist_qlearning(atoms_tm1, logits_q_tm1, a_tm1, r_t, pcont_t, atoms_t, logits_q_t, name='CategoricalDistQLearning')`](https://github.com/deepmind/trfl/blob/master/trfl/dist_value_ops.py?l=122)<!-- RULE: categorical_dist_qlearning .code-reference -->
 
 Implements Distributional Q-learning as TensorFlow ops.
 
@@ -168,7 +168,7 @@ Dabney and Munos. (https://arxiv.org/abs/1707.06887).
 * `ValueError`: If the tensors do not have the correct rank or compatibility.
 
 
-### [`categorical_dist_td_learning(atoms_tm1, logits_v_tm1, r_t, pcont_t, atoms_t, logits_v_t, name='CategoricalDistTDLearning')`](https://github.com/deepmind/trfl/blob/master/trfl/dist_value_ops.py?l=278)<!-- categorical_dist_td_learning .code-reference -->
+### [`categorical_dist_td_learning(atoms_tm1, logits_v_tm1, r_t, pcont_t, atoms_t, logits_v_t, name='CategoricalDistTDLearning')`](https://github.com/deepmind/trfl/blob/master/trfl/dist_value_ops.py?l=279)<!-- RULE: categorical_dist_td_learning .code-reference -->
 
 Implements Distributional TD-learning as TensorFlow ops.
 
@@ -207,7 +207,7 @@ Dabney and Munos. (https://arxiv.org/abs/1707.06887).
 * `ValueError`: If the tensors do not have the correct rank or compatibility.
 
 
-### [`discrete_policy_entropy_loss(policy_logits, normalise=False, name='discrete_policy_entropy_loss')`](https://github.com/deepmind/trfl/blob/master/trfl/discrete_policy_gradient_ops.py?l=40)<!-- discrete_policy_entropy_loss .code-reference -->
+### [`discrete_policy_entropy_loss(policy_logits, normalise=False, name='discrete_policy_entropy_loss')`](https://github.com/deepmind/trfl/blob/master/trfl/discrete_policy_gradient_ops.py?l=40)<!-- RULE: discrete_policy_entropy_loss .code-reference -->
 
 Computes the entropy 'loss' for a batch of policy logits.
 
@@ -245,7 +245,7 @@ H is the Shannon entropy.
       * `entropy`: Entropy of the policy, shape `[B]`.
 
 
-### [`discrete_policy_gradient(policy_logits, actions, action_values, name='discrete_policy_gradient')`](https://github.com/deepmind/trfl/blob/master/trfl/discrete_policy_gradient_ops.py?l=223)<!-- discrete_policy_gradient .code-reference -->
+### [`discrete_policy_gradient(policy_logits, actions, action_values, name='discrete_policy_gradient')`](https://github.com/deepmind/trfl/blob/master/trfl/discrete_policy_gradient_ops.py?l=223)<!-- RULE: discrete_policy_gradient .code-reference -->
 
 Computes a batch of discrete-action policy gradient losses.
 
@@ -298,7 +298,7 @@ having matching sizes for each batch dimension.
       do not match.
 
 
-### [`discrete_policy_gradient_loss(policy_logits, actions, action_values, name='discrete_policy_gradient_loss')`](https://github.com/deepmind/trfl/blob/master/trfl/discrete_policy_gradient_ops.py?l=279)<!-- discrete_policy_gradient_loss .code-reference -->
+### [`discrete_policy_gradient_loss(policy_logits, actions, action_values, name='discrete_policy_gradient_loss')`](https://github.com/deepmind/trfl/blob/master/trfl/discrete_policy_gradient_ops.py?l=279)<!-- RULE: discrete_policy_gradient_loss .code-reference -->
 
 Computes discrete policy gradient losses for a batch of trajectories.
 
@@ -326,7 +326,7 @@ shapes, assuming a [T, B] layout.
   in the batch. Differentiable w.r.t `policy_logits` only.
 
 
-### [`double_qlearning(q_tm1, a_tm1, r_t, pcont_t, q_t_value, q_t_selector, name='DoubleQLearning')`](https://github.com/deepmind/trfl/blob/master/trfl/action_value_ops.py?l=88)<!-- double_qlearning .code-reference -->
+### [`double_qlearning(q_tm1, a_tm1, r_t, pcont_t, q_t_value, q_t_selector, name='DoubleQLearning')`](https://github.com/deepmind/trfl/blob/master/trfl/action_value_ops.py?l=88)<!-- RULE: double_qlearning .code-reference -->
 
 Implements the double Q-learning loss as a TensorFlow op.
 
@@ -340,28 +340,28 @@ See "Double Q-learning" by van Hasselt.
 
 
 * `q_tm1`: Tensor holding Q-values for first timestep in a batch of
-    transitions, shape [B x num_actions].
-* `a_tm1`: Tensor holding action indices, shape [B].
-* `r_t`: Tensor holding rewards, shape [B].
-* `pcont_t`: Tensor holding pcontinue values, shape [B].
+    transitions, shape `[B x num_actions]`.
+* `a_tm1`: Tensor holding action indices, shape `[B]`.
+* `r_t`: Tensor holding rewards, shape `[B]`.
+* `pcont_t`: Tensor holding pcontinue values, shape `[B]`.
 * `q_t_value`: Tensor of Q-values for second timestep in a batch of transitions,
-    used to estimate the value of the best action, shape [B x num_actions].
+    used to estimate the value of the best action, shape `[B x num_actions]`.
 * `q_t_selector`: Tensor of Q-values for second timestep in a batch of
-    transitions used to estimate the best action, shape [B x num_actions].
+    transitions used to estimate the best action, shape `[B x num_actions]`.
 * `name`: name to prefix ops created within this op.
 
 ##### Returns:
 
   A namedtuple with fields:
 
-  * `loss`: a tensor containing the batch of losses, shape [B].
+  * `loss`: a tensor containing the batch of losses, shape `[B]`.
   * `extra`: a namedtuple with fields:
-      * `target`: batch of target values for `q_tm1[a_tm1]`, shape [B]
-      * `td_error`: batch of temporal difference errors, shape [B]
-      * `best_action`: batch of greedy actions wrt `q_t_selector`, shape [B]
+      * `target`: batch of target values for `q_tm1[a_tm1]`, shape `[B]`
+      * `td_error`: batch of temporal difference errors, shape `[B]`
+      * `best_action`: batch of greedy actions wrt `q_t_selector`, shape `[B]`
 
 
-### [`dpg(q_max, a_max, dqda_clipping=None, clip_norm=False, name='DpgLearning')`](https://github.com/deepmind/trfl/blob/master/trfl/dpg_ops.py?l=36)<!-- dpg .code-reference -->
+### [`dpg(q_max, a_max, dqda_clipping=None, clip_norm=False, name='DpgLearning')`](https://github.com/deepmind/trfl/blob/master/trfl/dpg_ops.py?l=36)<!-- RULE: dpg .code-reference -->
 
 Implements the Deterministic Policy Gradient (DPG) loss as a TensorFlow Op.
 
@@ -372,10 +372,10 @@ Pritzel, Heess et al. (http://arxiv.org/pdf/1509.02971v5.pdf).
 
 
 * `q_max`: Tensor holding Q-values generated by Q network with the input of
-    (state, a_max) pair, shape [B].
-* `a_max`: Tensor holding the optimal action, shape[B, action_dimension].
+    (state, a_max) pair, shape `[B]`.
+* `a_max`: Tensor holding the optimal action, shape `[B, action_dimension]`.
 * `dqda_clipping`: `int` or `float`, clips the gradient dqda element-wise
-    between [-dqda_clipping, dqda_clipping].
+    between `[-dqda_clipping, dqda_clipping]`.
 * `clip_norm`: Whether to perform dqda clipping on the vector norm of the last
     dimension, or component wise (default).
 * `name`: name to prefix ops created within this op.
@@ -384,19 +384,19 @@ Pritzel, Heess et al. (http://arxiv.org/pdf/1509.02971v5.pdf).
 
   A namedtuple with fields:
 
-    * `loss`: a tensor containing the batch of losses, shape [B].
-    * `extra`: a namedtuple with fields:
-        * `q_max`: Tensor holding the optimal Q values, [B].
-        * `a_max`: Tensor holding the optimal action, [B, action_dimension].
-        * `dqda`: Tensor holding the derivative dq/da, [B, action_dimension].
+  * `loss`: a tensor containing the batch of losses, shape `[B]`.
+  * `extra`: a namedtuple with fields:
+      * `q_max`: Tensor holding the optimal Q values, `[B]`.
+      * `a_max`: Tensor holding the optimal action, `[B, action_dimension]`.
+      * `dqda`: Tensor holding the derivative dq/da, `[B, action_dimension]`.
 
 ##### Raises:
 
 
-* `ValueError`: If q_max doesn't depend on a_max or if dqda_clipping <= 0.
+* `ValueError`: If `q_max` doesn't depend on `a_max` or if `dqda_clipping <= 0`.
 
 
-### [`generalized_lambda_returns(rewards, pcontinues, values, bootstrap_value, lambda_=1, name='generalized_lambda_returns')`](https://github.com/deepmind/trfl/blob/master/trfl/value_ops.py?l=75)<!-- generalized_lambda_returns .code-reference -->
+### [`generalized_lambda_returns(rewards, pcontinues, values, bootstrap_value, lambda_=1, name='generalized_lambda_returns')`](https://github.com/deepmind/trfl/blob/master/trfl/value_ops.py?l=75)<!-- RULE: generalized_lambda_returns .code-reference -->
 
 Computes lambda-returns along a batch of (chunks of) trajectories.
 
@@ -449,13 +449,15 @@ the baseline value function loss in A3C / GAE.
   2-D Tensor with shape `[T, B]`
 
 
-### [`multistep_forward_view(rewards, pcontinues, state_values, lambda_, back_prop=True, sequence_lengths=None, name='multistep_forward_view_op')`](https://github.com/deepmind/trfl/blob/master/trfl/sequence_ops.py?l=122)<!-- multistep_forward_view .code-reference -->
+### [`multistep_forward_view(rewards, pcontinues, state_values, lambda_, back_prop=True, sequence_lengths=None, name='multistep_forward_view_op')`](https://github.com/deepmind/trfl/blob/master/trfl/sequence_ops.py?l=124)<!-- RULE: multistep_forward_view .code-reference -->
 
 Evaluates complex backups (forward view of eligibility traces).
 
+  ```python
   result[t] = rewards[t] +
       pcontinues[t]*(lambda_[t]*result[t+1] + (1-lambda_[t])*state_values[t])
   result[last] = rewards[last] + pcontinues[last]*state_values[last]
+  ```
 
   This operation evaluates multistep returns where lambda_ parameter controls
   mixing between full returns and boostrapping. It is users responsibility
@@ -512,7 +514,7 @@ Evaluates complex backups (forward view of eligibility traces).
     Tensor of shape `[T, B]` containing multistep returns.
 
 
-### [`persistent_qlearning(q_tm1, a_tm1, r_t, pcont_t, q_t, action_gap_scale=0.5, name='PersistentQLearning')`](https://github.com/deepmind/trfl/blob/master/trfl/action_value_ops.py?l=142)<!-- persistent_qlearning .code-reference -->
+### [`persistent_qlearning(q_tm1, a_tm1, r_t, pcont_t, q_t, action_gap_scale=0.5, name='PersistentQLearning')`](https://github.com/deepmind/trfl/blob/master/trfl/action_value_ops.py?l=142)<!-- RULE: persistent_qlearning .code-reference -->
 
 Implements the persistent Q-learning loss as a TensorFlow op.
 
@@ -526,12 +528,12 @@ by Bellemare, Ostrovski, Guez et al. (https://arxiv.org/abs/1512.04860).
 
 
 * `q_tm1`: Tensor holding Q-values for first timestep in a batch of
-    transitions, shape [B x num_actions].
-* `a_tm1`: Tensor holding action indices, shape [B].
-* `r_t`: Tensor holding rewards, shape [B].
-* `pcont_t`: Tensor holding pcontinue values, shape [B].
+    transitions, shape `[B x num_actions]`.
+* `a_tm1`: Tensor holding action indices, shape `[B]`.
+* `r_t`: Tensor holding rewards, shape `[B]`.
+* `pcont_t`: Tensor holding pcontinue values, shape `[B]`.
 * `q_t`: Tensor holding Q-values for second timestep in a batch of
-    transitions, shape [B x num_actions].
+    transitions, shape `[B x num_actions]`.
     These values are used for estimating the value of the best action. In
     DQN they come from the target network.
 * `action_gap_scale`: coefficient in [0, 1] for scaling the action gap term.
@@ -541,13 +543,13 @@ by Bellemare, Ostrovski, Guez et al. (https://arxiv.org/abs/1512.04860).
 
   A namedtuple with fields:
 
-  * `loss`: a tensor containing the batch of losses, shape [B].
+  * `loss`: a tensor containing the batch of losses, shape `[B]`.
   * `extra`: a namedtuple with fields:
-      * `target`: batch of target values for `q_tm1[a_tm1]`, shape [B].
-      * `td_error`: batch of temporal difference errors, shape [B].
+      * `target`: batch of target values for `q_tm1[a_tm1]`, shape `[B]`.
+      * `td_error`: batch of temporal difference errors, shape `[B]`.
 
 
-### [`pixel_control_loss(observations, actions, action_values, cell_size, discount_factor, scale, crop_height_dim=(None, None), crop_width_dim=(None, None))`](https://github.com/deepmind/trfl/blob/master/trfl/pixel_control_ops.py?l=102)<!-- pixel_control_loss .code-reference -->
+### [`pixel_control_loss(observations, actions, action_values, cell_size, discount_factor, scale, crop_height_dim=(None, None), crop_width_dim=(None, None))`](https://github.com/deepmind/trfl/blob/master/trfl/pixel_control_ops.py?l=102)<!-- RULE: pixel_control_loss .code-reference -->
 
 Calculate n-step Q-learning loss for pixel control auxiliary task.
 
@@ -597,7 +599,7 @@ Mnih, Czarnecki et al. (https://arxiv.org/abs/1611.05397).
     the pseudo-rewards derived from the observations.
 
 
-### [`pixel_control_rewards(observations, cell_size)`](https://github.com/deepmind/trfl/blob/master/trfl/pixel_control_ops.py?l=42)<!-- pixel_control_rewards .code-reference -->
+### [`pixel_control_rewards(observations, cell_size)`](https://github.com/deepmind/trfl/blob/master/trfl/pixel_control_ops.py?l=42)<!-- RULE: pixel_control_rewards .code-reference -->
 
 Calculates pixel control task rewards from observation sequence.
 
@@ -631,7 +633,7 @@ Mnih, Czarnecki et al. (https://arxiv.org/abs/1611.05397).
   `cell_size`. If evenly-divisible, `H' = H/cell_size`, and similar for `W`.
 
 
-### [`policy_entropy_loss(policies, policy_vars=None, scale_op=None, name='policy_entropy_loss')`](https://github.com/deepmind/trfl/blob/master/trfl/policy_gradient_ops.py?l=139)<!-- policy_entropy_loss .code-reference -->
+### [`policy_entropy_loss(policies, policy_vars=None, scale_op=None, name='policy_entropy_loss')`](https://github.com/deepmind/trfl/blob/master/trfl/policy_gradient_ops.py?l=137)<!-- RULE: policy_entropy_loss .code-reference -->
 
 Calculates entropy 'loss' for policies represented by a distributions.
 
@@ -679,7 +681,7 @@ Categorical distribution in the `policies` nest).
   where [B1, B2, ... ] == policy.batch_shape
 
 
-### [`policy_gradient(policies, actions, action_values, policy_vars=None, name='policy_gradient')`](https://github.com/deepmind/trfl/blob/master/trfl/policy_gradient_ops.py?l=39)<!-- policy_gradient .code-reference -->
+### [`policy_gradient(policies, actions, action_values, policy_vars=None, name='policy_gradient')`](https://github.com/deepmind/trfl/blob/master/trfl/policy_gradient_ops.py?l=39)<!-- RULE: policy_gradient .code-reference -->
 
 Computes policy gradient losses for a batch of trajectories.
 
@@ -691,15 +693,13 @@ See policy_gradient_loss for more information on expected inputs and usage.
 * `policies`: A distribution over a batch supporting a `log_prob` method, e.g.
       an instance of `tfp.distributions.Distribution`. For example, for
       a diagonal gaussian policy:
-      `policies = tfp.distributions.MultivariateNormalDiag(mus,
-                                                                  sigmas)`
+      `policies = tfp.distributions.MultivariateNormalDiag(mus, sigmas)`
 * `actions`: An action batch Tensor used as the argument for `log_prob`. Has
       shape equal to the batch shape of the policies concatenated with the
       event shape of the policies (which may be scalar, in which case
       concatenation leaves shape just equal to batch shape).
-* `action_values`: A Tensor containing estimates of the values of the `actions`,
-      with same shape as `actions`. Has shape equal to the batch shape of the
-      policies.
+* `action_values`: A Tensor containing estimates of the values of the `actions`.
+      Has shape equal to the batch shape of the policies.
 * `policy_vars`: An optional iterable of Tensors used by `policies`. If provided
       is used in scope checks. For the multivariate normal example above this
       would be `[mus, sigmas]`.
@@ -713,7 +713,7 @@ See policy_gradient_loss for more information on expected inputs and usage.
       only.
 
 
-### [`policy_gradient_loss(policies, actions, action_values, policy_vars=None, name='policy_gradient_loss')`](https://github.com/deepmind/trfl/blob/master/trfl/policy_gradient_ops.py?l=79)<!-- policy_gradient_loss .code-reference -->
+### [`policy_gradient_loss(policies, actions, action_values, policy_vars=None, name='policy_gradient_loss')`](https://github.com/deepmind/trfl/blob/master/trfl/policy_gradient_ops.py?l=77)<!-- RULE: policy_gradient_loss .code-reference -->
 
 Computes policy gradient losses for a batch of trajectories.
 
@@ -748,7 +748,7 @@ concatenate(`[T, B]`, `event_shape` of the policies) shape for the actions.
   in the batch. Differentiable w.r.t `policy_logits` only.
 
 
-### [`qlambda(q_tm1, a_tm1, r_t, pcont_t, q_t, lambda_, name='GeneralizedQLambda')`](https://github.com/deepmind/trfl/blob/master/trfl/action_value_ops.py?l=308)<!-- qlambda .code-reference -->
+### [`qlambda(q_tm1, a_tm1, r_t, pcont_t, q_t, lambda_, name='GeneralizedQLambda')`](https://github.com/deepmind/trfl/blob/master/trfl/action_value_ops.py?l=308)<!-- RULE: qlambda .code-reference -->
 
 Implements Peng's and Watkins' Q(lambda) loss as a TensorFlow op.
 
@@ -788,7 +788,7 @@ See "Reinforcement Learning: An Introduction" by Sutton and Barto.
       * `td_error`: batch of temporal difference errors, shape `[T, B]`.
 
 
-### [`qlearning(q_tm1, a_tm1, r_t, pcont_t, q_t, name='QLearning')`](https://github.com/deepmind/trfl/blob/master/trfl/action_value_ops.py?l=41)<!-- qlearning .code-reference -->
+### [`qlearning(q_tm1, a_tm1, r_t, pcont_t, q_t, name='QLearning')`](https://github.com/deepmind/trfl/blob/master/trfl/action_value_ops.py?l=41)<!-- RULE: qlearning .code-reference -->
 
 Implements the Q-learning loss as a TensorFlow op.
 
@@ -802,25 +802,25 @@ See "Reinforcement Learning: An Introduction" by Sutton and Barto.
 
 
 * `q_tm1`: Tensor holding Q-values for first timestep in a batch of
-    transitions, shape [B x num_actions].
-* `a_tm1`: Tensor holding action indices, shape [B].
-* `r_t`: Tensor holding rewards, shape [B].
-* `pcont_t`: Tensor holding pcontinue values, shape [B].
+    transitions, shape `[B x num_actions]`.
+* `a_tm1`: Tensor holding action indices, shape `[B]`.
+* `r_t`: Tensor holding rewards, shape `[B]`.
+* `pcont_t`: Tensor holding pcontinue values, shape `[B]`.
 * `q_t`: Tensor holding Q-values for second timestep in a batch of
-    transitions, shape [B x num_actions].
+    transitions, shape `[B x num_actions]`.
 * `name`: name to prefix ops created within this op.
 
 ##### Returns:
 
   A namedtuple with fields:
 
-  * `loss`: a tensor containing the batch of losses, shape [B].
+  * `loss`: a tensor containing the batch of losses, shape `[B]`.
   * `extra`: a namedtuple with fields:
-      * `target`: batch of target values for `q_tm1[a_tm1]`, shape [B].
-      * `td_error`: batch of temporal difference errors, shape [B].
+      * `target`: batch of target values for `q_tm1[a_tm1]`, shape `[B]`.
+      * `td_error`: batch of temporal difference errors, shape `[B]`.
 
 
-### [`retrace(lambda_, qs, targnet_qs, actions, rewards, pcontinues, target_policy_probs, behaviour_policy_probs, stop_targnet_gradients=True, name=None)`](https://github.com/deepmind/trfl/blob/master/trfl/retrace_ops.py?l=45)<!-- retrace .code-reference -->
+### [`retrace(lambda_, qs, targnet_qs, actions, rewards, pcontinues, target_policy_probs, behaviour_policy_probs, stop_targnet_gradients=True, name=None)`](https://github.com/deepmind/trfl/blob/master/trfl/retrace_ops.py?l=45)<!-- RULE: retrace .code-reference -->
 
 Retrace algorithm loss calculation op.
 
@@ -896,7 +896,7 @@ details of this indexing in the argument descriptions.
   * `extra`: None
 
 
-### [`retrace_core(lambda_, q_tm1, a_tm1, r_t, pcont_t, target_policy_t, behaviour_policy_t, targnet_q_t, a_t, stop_targnet_gradients=True, name=None)`](https://github.com/deepmind/trfl/blob/master/trfl/retrace_ops.py?l=292)<!-- retrace_core .code-reference -->
+### [`retrace_core(lambda_, q_tm1, a_tm1, r_t, pcont_t, target_policy_t, behaviour_policy_t, targnet_q_t, a_t, stop_targnet_gradients=True, name=None)`](https://github.com/deepmind/trfl/blob/master/trfl/retrace_ops.py?l=292)<!-- RULE: retrace_core .code-reference -->
 
 Retrace algorithm core loss calculation op.
 
@@ -985,7 +985,7 @@ in variable names).
       * `target`: Tensor containing target action values, shape `[T, B]`.
 
 
-### [`sarsa(q_tm1, a_tm1, r_t, pcont_t, q_t, a_t, name='Sarsa')`](https://github.com/deepmind/trfl/blob/master/trfl/action_value_ops.py?l=197)<!-- sarsa .code-reference -->
+### [`sarsa(q_tm1, a_tm1, r_t, pcont_t, q_t, a_t, name='Sarsa')`](https://github.com/deepmind/trfl/blob/master/trfl/action_value_ops.py?l=197)<!-- RULE: sarsa .code-reference -->
 
 Implements the SARSA loss as a TensorFlow op.
 
@@ -999,26 +999,26 @@ See "Reinforcement Learning: An Introduction" by Sutton and Barto.
 
 
 * `q_tm1`: Tensor holding Q-values for first timestep in a batch of
-    transitions, shape [B x num_actions].
-* `a_tm1`: Tensor holding action indices, shape [B].
-* `r_t`: Tensor holding rewards, shape [B].
-* `pcont_t`: Tensor holding pcontinue values, shape [B].
+    transitions, shape `[B x num_actions]`.
+* `a_tm1`: Tensor holding action indices, shape `[B]`.
+* `r_t`: Tensor holding rewards, shape `[B]`.
+* `pcont_t`: Tensor holding pcontinue values, shape `[B]`.
 * `q_t`: Tensor holding Q-values for second timestep in a batch of
-    transitions, shape [B x num_actions].
-* `a_t`: Tensor holding action indices for second timestep, shape [B].
+    transitions, shape `[B x num_actions]`.
+* `a_t`: Tensor holding action indices for second timestep, shape `[B]`.
 * `name`: name to prefix ops created within this op.
 
 ##### Returns:
 
   A namedtuple with fields:
 
-  * `loss`: a tensor containing the batch of losses, shape [B].
+  * `loss`: a tensor containing the batch of losses, shape `[B]`.
   * `extra`: a namedtuple with fields:
-      * `target`: batch of target values for `q_tm1[a_tm1]`, shape [B].
-      * `td_error`: batch of temporal difference errors, shape [B].
+      * `target`: batch of target values for `q_tm1[a_tm1]`, shape `[B]`.
+      * `td_error`: batch of temporal difference errors, shape `[B]`.
 
 
-### [`sarse(q_tm1, a_tm1, r_t, pcont_t, q_t, probs_a_t, debug=False, name='Sarse')`](https://github.com/deepmind/trfl/blob/master/trfl/action_value_ops.py?l=244)<!-- sarse .code-reference -->
+### [`sarse(q_tm1, a_tm1, r_t, pcont_t, q_t, probs_a_t, debug=False, name='Sarse')`](https://github.com/deepmind/trfl/blob/master/trfl/action_value_ops.py?l=244)<!-- RULE: sarse .code-reference -->
 
 Implements the SARSE (Expected SARSA) loss as a TensorFlow op.
 
@@ -1033,14 +1033,14 @@ van Hasselt, Whiteson et al.
 
 
 * `q_tm1`: Tensor holding Q-values for first timestep in a batch of
-    transitions, shape [B x num_actions].
-* `a_tm1`: Tensor holding action indices, shape [B].
-* `r_t`: Tensor holding rewards, shape [B].
-* `pcont_t`: Tensor holding pcontinue values, shape [B].
+    transitions, shape `[B x num_actions]`.
+* `a_tm1`: Tensor holding action indices, shape `[B]`.
+* `r_t`: Tensor holding rewards, shape `[B]`.
+* `pcont_t`: Tensor holding pcontinue values, shape `[B]`.
 * `q_t`: Tensor holding Q-values for second timestep in a batch of
-    transitions, shape [B x num_actions].
+    transitions, shape `[B x num_actions]`.
 * `probs_a_t`: Tensor holding action probabilities for second timestep,
-    shape [B x num_actions].
+    shape `[B x num_actions]`.
 * `debug`: Boolean flag, when set to True adds ops to check whether probs_a_t
     is a batch of (approximately) valid probability distributions.
 * `name`: name to prefix ops created by this function.
@@ -1049,22 +1049,24 @@ van Hasselt, Whiteson et al.
 
   A namedtuple with fields:
 
-  * `loss`: a tensor containing the batch of losses, shape [B].
+  * `loss`: a tensor containing the batch of losses, shape `[B]`.
   * `extra`: a namedtuple with fields:
-      * `target`: batch of target values for `q_tm1[a_tm1]`, shape [B].
-      * `td_error`: batch of temporal difference errors, shape [B].
+      * `target`: batch of target values for `q_tm1[a_tm1]`, shape `[B]`.
+      * `td_error`: batch of temporal difference errors, shape `[B]`.
 
 
-### [`scan_discounted_sum(sequence, decay, initial_value, reverse=False, sequence_lengths=None, back_prop=True, name='scan_discounted_sum')`](https://github.com/deepmind/trfl/blob/master/trfl/sequence_ops.py?l=47)<!-- scan_discounted_sum .code-reference -->
+### [`scan_discounted_sum(sequence, decay, initial_value, reverse=False, sequence_lengths=None, back_prop=True, name='scan_discounted_sum')`](https://github.com/deepmind/trfl/blob/master/trfl/sequence_ops.py?l=47)<!-- RULE: scan_discounted_sum .code-reference -->
 
 Evaluates a cumulative discounted sum along dimension 0.
 
+  ```python
   if reverse = False:
     result[1] = sequence[1] + decay[1] * initial_value
     result[k] = sequence[k] + decay[k] * result[k - 1]
   if reverse = True:
     result[last] = sequence[last] + decay[last] * initial_value
     result[k] = sequence[k] + decay[k] * result[k + 1]
+  ```
 
 Respective dimensions T, B and ... have to be the same for all input tensors.
 T: temporal dimension of the sequence; B: batch dimension of the sequence.
@@ -1095,7 +1097,7 @@ T: temporal dimension of the sequence; B: batch dimension of the sequence.
   Cumulative sum with discount. Same shape and type as `sequence`.
 
 
-### [`sequence_a2c_loss(policies, baseline_values, actions, rewards, pcontinues, bootstrap_value, policy_vars=None, lambda_=1, entropy_cost=None, baseline_cost=1, entropy_scale_op=None, name='SequenceA2CLoss')`](https://github.com/deepmind/trfl/blob/master/trfl/policy_gradient_ops.py?l=202)<!-- sequence_a2c_loss .code-reference -->
+### [`sequence_a2c_loss(policies, baseline_values, actions, rewards, pcontinues, bootstrap_value, policy_vars=None, lambda_=1, entropy_cost=None, baseline_cost=1, entropy_scale_op=None, name='SequenceA2CLoss')`](https://github.com/deepmind/trfl/blob/master/trfl/policy_gradient_ops.py?l=200)<!-- RULE: sequence_a2c_loss .code-reference -->
 
 Constructs a TensorFlow graph computing the A2C/GAE loss for sequences.
 
@@ -1188,7 +1190,7 @@ used across all action dimensions for each timestep.
           shape `[T, B]`.
 
 
-### [`sequence_advantage_actor_critic_loss(policy_logits, baseline_values, actions, rewards, pcontinues, bootstrap_value, lambda_=1, entropy_cost=None, baseline_cost=1, normalise_entropy=False, name='SequenceAdvantageActorCriticLoss')`](https://github.com/deepmind/trfl/blob/master/trfl/discrete_policy_gradient_ops.py?l=97)<!-- sequence_advantage_actor_critic_loss .code-reference -->
+### [`sequence_advantage_actor_critic_loss(policy_logits, baseline_values, actions, rewards, pcontinues, bootstrap_value, lambda_=1, entropy_cost=None, baseline_cost=1, normalise_entropy=False, name='SequenceAdvantageActorCriticLoss')`](https://github.com/deepmind/trfl/blob/master/trfl/discrete_policy_gradient_ops.py?l=97)<!-- RULE: sequence_advantage_actor_critic_loss .code-reference -->
 
 Calculates the loss for an A2C update along a batch of trajectories.
 
@@ -1269,7 +1271,7 @@ each timestep.
           shape `[T, B]`.
 
 
-### [`td_lambda(state_values, rewards, pcontinues, bootstrap_value, lambda_=1, name='BaselineLoss')`](https://github.com/deepmind/trfl/blob/master/trfl/value_ops.py?l=160)<!-- td_lambda .code-reference -->
+### [`td_lambda(state_values, rewards, pcontinues, bootstrap_value, lambda_=1, name='BaselineLoss')`](https://github.com/deepmind/trfl/blob/master/trfl/value_ops.py?l=160)<!-- RULE: td_lambda .code-reference -->
 
 Constructs a TensorFlow graph computing the L2 loss for sequences.
 
@@ -1320,7 +1322,7 @@ estimation" by Schulman, Moritz, Levine et al.
       * discounted_returns, Tensor of shape `[T, B]`
 
 
-### [`td_learning(v_tm1, r_t, pcont_t, v_t, name='TDLearning')`](https://github.com/deepmind/trfl/blob/master/trfl/value_ops.py?l=35)<!-- td_learning .code-reference -->
+### [`td_learning(v_tm1, r_t, pcont_t, v_t, name='TDLearning')`](https://github.com/deepmind/trfl/blob/master/trfl/value_ops.py?l=35)<!-- RULE: td_learning .code-reference -->
 
 Implements the TD(0)-learning loss as a TensorFlow op.
 
@@ -1333,23 +1335,23 @@ See "Learning to Predict by the Methods of Temporal Differences" by Sutton.
 ##### Args:
 
 
-* `v_tm1`: Tensor holding values at previous timestep, shape [B].
-* `r_t`: Tensor holding rewards, shape [B].
-* `pcont_t`: Tensor holding pcontinue values, shape [B].
-* `v_t`: Tensor holding values at current timestep, shape [B].
+* `v_tm1`: Tensor holding values at previous timestep, shape `[B]`.
+* `r_t`: Tensor holding rewards, shape `[B]`.
+* `pcont_t`: Tensor holding pcontinue values, shape `[B]`.
+* `v_t`: Tensor holding values at current timestep, shape `[B]`.
 * `name`: name to prefix ops created by this function.
 
 ##### Returns:
 
   A namedtuple with fields:
 
-  * `loss`: a tensor containing the batch of losses, shape [B].
+  * `loss`: a tensor containing the batch of losses, shape `[B]`.
   * `extra`: a namedtuple with fields:
-      * `target`: batch of target values for `v_tm1`, shape [B].
-      * `td_error`: batch of temporal difference errors, shape [B].
+      * `target`: batch of target values for `v_tm1`, shape `[B]`.
+      * `td_error`: batch of temporal difference errors, shape `[B]`.
 
 
-### [`vtrace_from_importance_weights(log_rhos, discounts, rewards, values, bootstrap_value, clip_rho_threshold=1.0, clip_pg_rho_threshold=1.0, name='vtrace_from_importance_weights')`](https://github.com/deepmind/trfl/blob/master/trfl/vtrace_ops.py?l=155)<!-- vtrace_from_importance_weights .code-reference -->
+### [`vtrace_from_importance_weights(log_rhos, discounts, rewards, values, bootstrap_value, clip_rho_threshold=1.0, clip_pg_rho_threshold=1.0, name='vtrace_from_importance_weights')`](https://github.com/deepmind/trfl/blob/master/trfl/vtrace_ops.py?l=155)<!-- RULE: vtrace_from_importance_weights .code-reference -->
 
 V-trace from log importance weights.
 
@@ -1363,23 +1365,24 @@ In the notation used throughout documentation and comments, T refers to the
 time dimension ranging from 0 to T-1. B refers to the batch size and
 NUM_ACTIONS refers to the number of actions. This code also supports the
 case where all tensors have the same number of additional dimensions, e.g.,
-`rewards` is [T, B, C], `values` is [T, B, C], `bootstrap_value` is [B, C].
+`rewards` is `[T, B, C]`, `values` is `[T, B, C]`, `bootstrap_value`
+is `[B, C]`.
 
 ##### Args:
 
 
-* `log_rhos`: A float32 tensor of shape [T, B, NUM_ACTIONS] representing the log
-    importance sampling weights, i.e.
+* `log_rhos`: A float32 tensor of shape `[T, B, NUM_ACTIONS]` representing the
+    log importance sampling weights, i.e.
     log(target_policy(a) / behaviour_policy(a)). V-trace performs operations
     on rhos in log-space for numerical stability.
-* `discounts`: A float32 tensor of shape [T, B] with discounts encountered when
+* `discounts`: A float32 tensor of shape `[T, B]` with discounts encountered
+    when following the behaviour policy.
+* `rewards`: A float32 tensor of shape `[T, B]` containing rewards generated by
     following the behaviour policy.
-* `rewards`: A float32 tensor of shape [T, B] containing rewards generated by
-    following the behaviour policy.
-* `values`: A float32 tensor of shape [T, B] with the value function estimates
+* `values`: A float32 tensor of shape `[T, B]` with the value function estimates
     wrt. the target policy.
-* `bootstrap_value`: A float32 of shape [B] with the value function estimate at
-    time T.
+* `bootstrap_value`: A float32 of shape `[B]` with the value function estimate
+    at time T.
 * `clip_rho_threshold`: A scalar float32 tensor with the clipping threshold for
     importance weights (rho) when calculating the baseline targets (vs).
     rho^bar in the paper. If None, no clipping is applied.
@@ -1392,13 +1395,13 @@ case where all tensors have the same number of additional dimensions, e.g.,
 
   A VTraceReturns namedtuple (vs, pg_advantages) where:
 
-* `vs`: A float32 tensor of shape [T, B]. Can be used as target to
+* `vs`: A float32 tensor of shape `[T, B]`. Can be used as target to
       train a baseline (V(x_t) - vs_t)^2.
-* `pg_advantages`: A float32 tensor of shape [T, B]. Can be used as the
+* `pg_advantages`: A float32 tensor of shape `[T, B]`. Can be used as the
       advantage in the calculation of policy gradients.
 
 
-### [`vtrace_from_logits(behaviour_policy_logits, target_policy_logits, actions, discounts, rewards, values, bootstrap_value, clip_rho_threshold=1.0, clip_pg_rho_threshold=1.0, name='vtrace_from_logits')`](https://github.com/deepmind/trfl/blob/master/trfl/vtrace_ops.py?l=62)<!-- vtrace_from_logits .code-reference -->
+### [`vtrace_from_logits(behaviour_policy_logits, target_policy_logits, actions, discounts, rewards, values, bootstrap_value, clip_rho_threshold=1.0, clip_pg_rho_threshold=1.0, name='vtrace_from_logits')`](https://github.com/deepmind/trfl/blob/master/trfl/vtrace_ops.py?l=62)<!-- RULE: vtrace_from_logits .code-reference -->
 
 V-trace for softmax policies.
 
@@ -1412,28 +1415,28 @@ Target policy refers to the policy we are interested in improving and
 behaviour policy refers to the policy that generated the given
 rewards and actions.
 
-In the notation used throughout documentation and comments, T refers to the
-time dimension ranging from 0 to T-1. B refers to the batch size and
-NUM_ACTIONS refers to the number of actions.
+In the notation used throughout documentation and comments, `T` refers to the
+time dimension ranging from `0` to `T-1`. `B` refers to the batch size and
+`NUM_ACTIONS` refers to the number of actions.
 
 ##### Args:
 
 
-* `behaviour_policy_logits`: A float32 tensor of shape [T, B, NUM_ACTIONS] with
-    un-normalized log-probabilities parametrizing the softmax behaviour
+* `behaviour_policy_logits`: A float32 tensor of shape `[T, B, NUM_ACTIONS]`
+    with un-normalized log-probabilities parametrizing the softmax behaviour
     policy.
-* `target_policy_logits`: A float32 tensor of shape [T, B, NUM_ACTIONS] with
+* `target_policy_logits`: A float32 tensor of shape `[T, B, NUM_ACTIONS]` with
     un-normalized log-probabilities parametrizing the softmax target policy.
-* `actions`: An int32 tensor of shape [T, B] of actions sampled from the
+* `actions`: An int32 tensor of shape `[T, B]` of actions sampled from the
     behaviour policy.
-* `discounts`: A float32 tensor of shape [T, B] with the discount encountered
+* `discounts`: A float32 tensor of shape `[T, B]` with the discount encountered
     when following the behaviour policy.
-* `rewards`: A float32 tensor of shape [T, B] with the rewards generated by
+* `rewards`: A float32 tensor of shape `[T, B]` with the rewards generated by
     following the behaviour policy.
-* `values`: A float32 tensor of shape [T, B] with the value function estimates
+* `values`: A float32 tensor of shape `[T, B]` with the value function estimates
     wrt. the target policy.
-* `bootstrap_value`: A float32 of shape [B] with the value function estimate at
-    time T.
+* `bootstrap_value`: A float32 of shape `[B]` with the value function estimate
+    at time T.
 * `clip_rho_threshold`: A scalar float32 tensor with the clipping threshold for
     importance weights (rho) when calculating the baseline targets (vs).
     rho^bar in the paper.
@@ -1445,15 +1448,15 @@ NUM_ACTIONS refers to the number of actions.
 
   A `VTraceFromLogitsReturns` namedtuple with the following fields:
 
-* `vs`: A float32 tensor of shape [T, B]. Can be used as target to train a
+* `vs`: A float32 tensor of shape `[T, B]`. Can be used as target to train a
         baseline (V(x_t) - vs_t)^2.
-* `pg_advantages`: A float 32 tensor of shape [T, B]. Can be used as an
+* `pg_advantages`: A float 32 tensor of shape `[T, B]`. Can be used as an
       estimate of the advantage in the calculation of policy gradients.
-* `log_rhos`: A float32 tensor of shape [T, B] containing the log importance
+* `log_rhos`: A float32 tensor of shape `[T, B]` containing the log importance
       sampling weights (log rhos).
-* `behaviour_action_log_probs`: A float32 tensor of shape [T, B] containing
+* `behaviour_action_log_probs`: A float32 tensor of shape `[T, B]` containing
       behaviour policy action log probabilities (log \mu(a_t)).
-* `target_action_log_probs`: A float32 tensor of shape [T, B] containing
+* `target_action_log_probs`: A float32 tensor of shape `[T, B]` containing
       target policy action probabilities (log \pi(a_t)).
 
 
